@@ -1,0 +1,103 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Animated SVG keyframes */
+@keyframes floatCloud {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+  100% { transform: translateY(0) scale(1); }
+}
+@keyframes sunSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes leafSway {
+  0%, 100% { transform: rotate(-5deg) translateX(0); }
+  50% { transform: rotate(10deg) translateX(10px); }
+}
+
+.animate-cloud {
+  animation: floatCloud 8s ease-in-out infinite;
+}
+.animate-sun-spin {
+  animation: sunSpin 16s linear infinite;
+}
+.animate-leaf-sway {
+  animation: leafSway 6s ease-in-out infinite;
+}
+
+/* Subtle animated gradient background for the app */
+@keyframes bgGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+body, #root {
+  background: linear-gradient(270deg, #f0fdf4, #f1f8e9, #fffde7, #e0f7fa, #f0fdf4);
+  background-size: 200% 200%;
+  animation: bgGradient 20s ease-in-out infinite;
+}
+
+@keyframes navBounce {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-6px) scale(1.1); }
+  60% { transform: translateY(2px) scale(0.95); }
+}
+@keyframes navSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes navSway {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(10deg); }
+}
+
+.nav-animate-bounce {
+  animation: navBounce 0.7s cubic-bezier(0.4, 0.2, 0.6, 1.2);
+}
+.nav-animate-spin {
+  animation: navSpin 2.5s linear infinite;
+}
+.nav-animate-sway {
+  animation: navSway 2.5s ease-in-out infinite;
+}
